@@ -16,6 +16,15 @@ void printNumbers(int n)
     return;
 }
 
+int printSum(int n)
+{
+    if(n == 0)
+    {
+        return 0;
+    }
+   
+    return n+printSum(n-1);
+}
 
 int factorial(int n) {
     if (n == 0 || n == 1) {
@@ -26,14 +35,14 @@ int factorial(int n) {
 
 
 
-
 int main(){
     
     // printNumbers(10);
     // cout<<endl;
 
-    int fact = factorial(5);
-    cout<<"Factorial : "<<fact<<endl;
+    // int fact = factorial(5);
+    int sumn = printSum(10);
+    cout<<"Sum is : "<<sumn<<endl;
 
 
     return 0;
