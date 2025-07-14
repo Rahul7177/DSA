@@ -9,6 +9,19 @@ struct ListNode {
 
 class Solution {
 public:
+
+    // Recursive Solution
+    // ListNode* solve(ListNode* curr, ListNode* prev) {
+    //     if (curr == NULL) {
+    //         return prev;
+    //     }
+
+    //     ListNode* next = curr->next;
+    //     curr->next = prev;
+    //     return solve(next, curr);
+    // }
+
+
     ListNode* reverseList(ListNode* head) {
         ListNode* prev = NULL;
         ListNode* next = head;
