@@ -46,6 +46,25 @@ void reverseArray(int arr[],int s, int e)
     return reverseArray(arr,s+1,e-1);
 }
 
+int sumArray(int s,int n, int arr[])
+{
+    if(s > n)
+    {
+        return 0;
+    }
+
+
+    // cout<<arr[s]<<" ";
+    int sum = arr[s]+ sumArray(s+1,n,arr);
+
+    return sum;
+}
+
+
+string reverseString(string str){
+
+
+}
 
 int main(){
     
@@ -56,14 +75,25 @@ int main(){
     // int sumn = printSum(10);
     // cout<<"Sum is : "<<sumn<<endl;
 
-    int arr[5] = {3,1,4,2,5};
-    int start = 0;
-    int end = 4;
-    reverseArray(arr,start,end);
-    for(auto i:arr)
-    {
-        cout<<i<<" ";
-    }
+    // int arr[5] = {3,1,4,2,5};
+    // int n = sizeof(arr)/sizeof(arr[0]);
+    // int ans = sumArray(0,4,arr);
+    // cout<<"Sum of Array is : "<<ans<<endl;
 
+
+    // int start = 0;
+    // int end = 4;
+    // reverseArray(arr,start,end);
+    // for(auto i:arr)
+    // {
+    //     cout<<i<<" ";
+    // }
+
+
+    string str = "Heelo World !!";
+    cout<<"OG String : "<<str<<endl;
+    int len = str.length();
+    string rev = reverseString(str);
+    cout<<"Rev String : "<<rev<<endl;
     return 0;
 }
